@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Popup Notification</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Video Popup Container */
+    .video-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #000;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      width: 80%;
+      max-width: 640px;
+    }
+
+    /* Video */
+    .video-popup video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    /* Close Button */
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      z-index: 10000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video Popup -->
+  <div class="video-popup" id="popup">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <video autoplay muted controls>
+      <source src="your-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Background Content -->
+  <div style="padding: 30px; color: white;">
+    <h1>Welcome to My Website</h1>
+    <p>This is your main content. The video shows like a popup notification.</p>
+  </div>
+
+  <script>
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

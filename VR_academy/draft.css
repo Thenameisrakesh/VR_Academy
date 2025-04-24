@@ -1,0 +1,37 @@
+
+  
+  .video-popup {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    width: auto;
+    height: auto;
+    max-width: 640px;
+    height: 350px;
+  }
+  
+  .video-popup iframe {
+    width: 100%;
+    height: 150%;
+    border: none;
+    border-radius: 12px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 40px;
+    background-color: #000;
+    padding: 0px 10px 0px 10px;
+    color: rgb(90, 204, 214);
+    cursor: pointer;
+    z-index: 10000;
+  }
+  
+ 
